@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Essential Meta Tags -->
+    <title>Rust Bristol Meetup - The Rust Programming Community in Bristol, UK</title>
+    <meta name="description" content="Join Bristol's Rust programming language community. Meetups and talks for all skill levels. Connect with local Rust developers in Bristol, UK.">
+    <meta name="keywords" content="rust programming, bristol tech meetup, rust developers bristol, rust workshops, programming community bristol">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="🦀 Rust Bristol Meetup">
+    <meta property="og:description" content="Join Bristol's Rust programming language community. Meetups and talks for all skill levels.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rust-bristol.github.io">
+    <meta property="og:image" content="https://rust-bristol.github.io/images/og-image.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rust Bristol Meetup">
+    <meta name="twitter:description" content="Join Bristol's Rust programming language community. Meetups and talks.">
+    <meta name="twitter:image" content="https://rust-bristol.github.io/images/twitter-card.png">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Rust Bristol Community">
+    <link rel="canonical" href="https://rust-bristol.github.io">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <!-- Same styles as before -->
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --border-color: #e5e5e5;
+            --accent-color: #f4b860;
+            --link-color: #2563eb;
+        }
+
+        body {
+            font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-size: 15px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .cta-button {
+            background: var(--accent-color);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            font-weight: normal;
+            color: #666;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .testimonial {
+            font-style: italic;
+            margin: 20px 0;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-weight: bold;
+        }
+
+        .author-title {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .support-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .support-option {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            transition: border-color 0.2s;
+        }
+
+        .support-option:hover {
+            border-color: var(--accent-color);
+        }
+
+        .support-option h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.1em;
+        }
+
+        .support-option p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Rust Bristol",
+      "url": "https://rust-bristol.github.io",
+      "logo": "https://rust-bristol.github.io/images/logo.png",
+      "description": "Bristol's Rust programming language community hosting meetups and talks.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bristol",
+        "addressCountry": "UK"
+      },
+      "event": {
+        "@type": "EventSeries",
+        "name": "Rust Bristol Meetups",
+        "description": "Meetups focusing on Rust programming language topics",
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header with semantic HTML -->
+    <header>
+        <nav class="nav" aria-label="Main navigation">
+            <div class="logo" aria-label="Rust Bristol Logo">🦀 Rust Bristol</div>
+            <div class="nav-links">
+                <a href="#about" aria-label="About Rust Bristol">About</a>
+                <a href="#events" aria-label="Our Events">Events</a>
+                <a href="#contact" aria-label="Contact Us">Contact</a>
+                <a href="https://discord.gg/rXwjM5BQdY" class="cta-button" aria-label="Join our Discord community">Join Discord</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" aria-labelledby="about-heading">
+            <h1 id="about-heading" class="visually-hidden">About Rust Bristol</h1>
+            <div class="grid">
+                <article class="card">
+                    <h2>About us</h2>
+                    <p>
+                        We offer a place for 🦀 <a href="https://www.rust-lang.org/">Rust</a> programmers and enthusiasts to meet and share anything Rusty with a chill, open community.
+                    </p>
+                    <p>
+                        Join us on Discord where we chat and organise future events!
+                    </p>
+                    <div class="stats" aria-label="Statistics">
+                        <div class="stat">
+                            <span class="stat-label">
+                                <a href="https://discord.gg/rXwjM5BQdY" class="cta-button" aria-label="Join our Discord community">Join Discord</a>
+                            </span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">60+</span>
+                            <span class="stat-label">members</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h2>Support Our Community</h2>
+                    <p>Help us make Rust Bristol and Bristol tech's scene more active! We're looking for community support in several ways:</p>
+
+                    <div class="support-options">
+                        <a href="/help#venue" class="support-option">
+                            <h3>🏢 Offer a Venue</h3>
+                            <p>Can your company host our meetups? We typically need space for 15-30 people with presentation capabilities.</p>
+                        </a>
+
+                        <a href="/help#sponsor" class="support-option">
+                            <h3>🎁 Sponsor an Event</h3>
+                            <p>Help cover costs for venue costs and drinks in exchange for exposure. Any support makes a difference!</p>
+                        </a>
+
+                        <a href="https://opencollective.com/rust-bristol" class="support-option">
+                            <h3>💝 Make a Donation</h3>
+                            <p>Support us on Open Collective to help our community get going.</p>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" aria-labelledby="events-heading">
+            <h2 id="events-heading">Upcoming & Past Events</h2>
+            <table aria-label="Events calendar">
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Event</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">RSVP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>November 20, 2024</td>
+                        <td>Several Rust Talks</td>
+                        <td>TBD (in Bristol)</td>
+                        <td><a href="#" aria-label="Register for our Rust Talks event">Register →</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" aria-labelledby="contact-heading">
+            <div class="card">
+                <h2 id="contact-heading">Contact</h2>
+                <p>Want to sponsor or help our community? Email us at <a href="mailto:rustbristol@arbfay.com">rustbristol@arbfay.com</a></p>
+                <p>Want to speak at an event?
+                    <a href="https://discord.gg/rXwjM5BQdY" class="cta-button" aria-label="Join our Discord community">Join Discord</a> and tell us there!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rust Bristol. All rights reserved.</p>
+    </footer>
+</body>
+</html>
